@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'NeutralFace';
-  src: url('/fonts/NeutralFace-Bold.otf') format('opentype');
+  src: url('NeutralFace-Bold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Manrope';
-  src: url('/fonts/Manrope.ttf') format('truetype');
+  src: url('Manrope.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -29,11 +29,17 @@ body {
 .container {
   background: rgba(0, 0, 0, 0.6);
   border-radius: 15px;
-  padding: 30px;
+  padding: 30px 24px; /* Измените этот отступ по желанию */
   max-width: 400px;
   width: 100%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  box-sizing: border-box;
 }
+
+/* Применяем отступы только для экрана 2 */
+#screen2 .container {
+  padding-right: 40px; /* Здесь задаем отступ справа */
+}
+
 
 h1, h2 {
   text-align: center;
@@ -82,12 +88,12 @@ button:hover {
 }
 
 .page2 {
-  background: url('/images/background2.png') no-repeat center center fixed;
+  background: url('background2.png') no-repeat center center fixed;
   background-size: cover;
 }
 
 .page3 {
-  background: url('/images/background3.png') no-repeat center center fixed;
+  background: url('background3.png') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -123,3 +129,4 @@ button:hover {
   font-family: Arial, sans-serif !important;
   font-weight: normal !important;
 }
+
